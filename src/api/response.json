@@ -1,0 +1,47 @@
+{
+  "billingAddress": {
+    "firstName": "Kalpana",
+    "lastName": "Chaudhry",
+    "addressLine1": "Bangalore",
+    "addressLine2": "Bangalore",
+    "city": "Bangalore",
+    "State": "Karnataka",
+    "zipCode": 560098,
+    "country": "India",
+    "orderDate": "2019-08-22"
+  },
+  "shippingAddress": {
+    "firstName": "Kalpana",
+    "lastName": "Chaudhry",
+    "addressLine1": "Bangalore",
+    "addressLine2": "Bangalore",
+    "city": "Bangalore",
+    "State": "Karnataka",
+    "zipCode": 560098,
+    "country": "India",
+    "expectedDelivery": "2019-08-25"
+  },
+  "products": [
+    {
+      "productId": 100000,
+      "name": "Stockholm Dining Table",
+      "unitprice": 529,
+      "qty": 8,
+      "notes": ""
+    },
+    {
+      "productId": 100041,
+      "name": "Oulu Dining Chair Tangrine",
+      "unitprice": 105,
+      "qty": 2,
+      "notes": ""
+    },
+    {
+      "productId": 100042,
+      "name": "Oulu Dining Chair Graphite",
+      "unitprice": 105,
+      "qty": 12,
+      "notes": ""
+    }
+  ]
+}

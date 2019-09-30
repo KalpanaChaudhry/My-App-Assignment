@@ -1,0 +1,47 @@
+.onSave {
+  float: left;
+  background-color: #5284ee;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+.error {
+  border: solid 1px red;
+}
+
+.errorText {
+  color: red;
+  font-size: 10px;
+  margin-left: 12px;
+}
+
+.disabledButton {
+  width: 79%;
+  display: block;
+  margin: 10px;
+  background-color: #d4d4d4;
+  padding: 5px;
+}
+
+.fields {
+  width: 79%;
+  display: block;
+  margin: 10px;
+
+  padding: 5px;
+}
+
+.error {
+  border: solid 1px red;
+}
+
+.errorText {
+  color: red;
+  font-size: 10px;
+  margin-left: 12px;
+}
+
+.onDelete {
+  background-color: red;
+  color: white;
+}
