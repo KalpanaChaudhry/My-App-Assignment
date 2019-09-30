@@ -8,28 +8,38 @@ import response from "../../api/response.json";
 
 class Billing extends React.Component {
   state = {
-    initialData: response,
-    disable: false
+    initialData: response
   };
 
   onSaveHandler = () => {
-    if (
-      !this.state.initialData.billingAddress.firstName ||
-      !this.state.initialData.billingAddress.lastName ||
-      !this.state.initialData.billingAddress.addressLine1 ||
-      !this.state.initialData.billingAddress.addressLine2 ||
-      !this.state.initialData.billingAddress.city ||
-      !this.state.initialData.billingAddress.State ||
-      !this.state.initialData.billingAddress.zipCode ||
-      this.state.initialData.billingAddress.zipCode == 0 ||
-      !this.state.initialData.billingAddress.country ||
-      !this.state.initialData.billingAddress.orderDate
-    ) {
-      this.setState({ disable: true });
-      alert("all fields are mandatory except notes");
-    }
+    let valid = true;
+    Object.keys(this.state.initialData.billingAddress).forEach(key => {
+      if (!this.state.initialData.billingAddress[key]) {
+        valid = false;
+      }
+    });
+    Object.keys(this.state.initialData.shippingAddress).forEach(key => {
+      if (!this.state.initialData.shippingAddress[key]) {
+        valid = false;
+      }
+    });
+    this.state.initialData.products.forEach(obj => {
+      if (!obj.productId) {
+        valid = false;
+      } else if (!obj.name) {
+        valid = false;
+      } else if (!obj.unitprice) {
+        valid = false;
+      } else if (!obj.qty) {
+        valid = false;
+      }
+    });
 
-    console.log(this.state.initialData);
+    if (valid) {
+      console.log(this.state.initialData);
+    } else {
+      alert("all fields are required except notes");
+    }
   };
 
   changeHandler = (parent, igkey, value) => {
